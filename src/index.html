@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMind转Markdown工具</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>XMind转Markdown工具</h1>
+    </header>
+
+    <div class="privacy-notice">
+      <p>基于 <a href="https://pan.quark.cn/s/8f825b0f29b0" title="分享码 i4F3">XMind 23.08 Free</a> 所支持的功能范围制作，忽略概要、外框、自由主题元素。文件大小限制在50MB以内，数据在本地处理，保护您的隐私。</p>
+    </div>
+
+    <div class="main-content">
+      <div class="file-section">
+        <input type="file" id="fileInput" accept=".xmind" style="display: none;">
+        <button id="selectFileBtn" class="btn btn-primary">选择XMind文件</button>
+        <div id="fileInfo" class="file-info"></div>
+      </div>
+
+      <div class="convert-section">
+        <button id="convertBtn" class="btn btn-success" disabled>开始转换</button>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div id="progressText" class="progress-text">0%</div>
+      </div>
+
+      <div id="statusArea" class="status-area" style="display: none;">
+        <div id="statusMessage" class="status-message"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 LSG 产品组</p>
+    </footer>
+  </div>
+
+  <script src="lib/jszip.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/file-handler.js"></script>
+  <script src="js/xmind-parser.js"></script>
+  <script src="js/markdown-generator.js"></script>
+  <script src="js/resource-manager.js"></script>
+  <script src="js/zip-packager.js"></script>
+  <script src="js/ui-controller.js"></script>
+  <script src="js/conversion-manager.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
